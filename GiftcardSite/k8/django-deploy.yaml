@@ -21,7 +21,10 @@ spec:
             - containerPort: 8000
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: thisisatestthing. 
+              valueFrom:
+                secretKeyRef:
+                  name: envsecrets
+                  key: password
 
             - name: MYSQL_DB
               value: GiftcardSiteDB
@@ -44,6 +47,12 @@ spec:
                     name: admin-login-secrets
                     key: password
 
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: envsecrets
+                  key: secret_key
+
           volumeMounts:
             - name: mysql-volume-mount
               mountPath: /var/lib/busybox
@@ -59,4 +68,3 @@ spec:
         - name: static-data-volume-mount
           persistentVolumeClaim:
             claimName: static-data-pvc
-
