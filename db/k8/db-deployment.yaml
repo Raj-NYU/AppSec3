@@ -21,17 +21,17 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: envsecret
+                  name: envsecrets
                   key: mysql-root-password
             - name: MYSQL_DATABASE
               valueFrom:
                 secretKeyRef:
-                  name: envsecret
+                  name: envsecrets
                   key: mysql-database
             - name: SECRET_KEY
               valueFrom:
                 secretKeyRef:
-                  name: envsecret
+                  name: envsecrets
                   key: secret-key
           ports:
             - containerPort: 3306
