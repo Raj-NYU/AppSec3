@@ -5,44 +5,45 @@ metadata:
 spec:
   template:
     spec:
-      containers: 
-      - name: migration
-        image: nyuappsec/assign3:v0
-        command: ['python3', 'manage.py', 'migrate']
-        env:
+      containers:
+        - name: migration
+          image: nyuappsec/assign3:v0
+          command:
+            - 'python3'
+            - 'manage.py'
+            - 'migrate'
+          env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: envsecrets
                   key: password
-
+                  
             - name: MYSQL_DB
               value: GiftcardSiteDB
-
             - name: MYSQL_HOST
               value: mysql-service
-
             - name: ALLOWED_HOSTS
-              value: "*,"
-
+              value: "*"
+              
             - name: ADMIN_UNAME
               valueFrom:
                 secretKeyRef:
-                    name: admin-login-secrets
-                    key: username
-
+                  name: admin-login-secrets
+                  key: username
+                  
             - name: ADMIN_PASS
               valueFrom:
                 secretKeyRef:
-                    name: admin-login-secrets
-                    key: password
-
+                  name: admin-login-secrets
+                  key: password
+                  
             - name: SECRET_KEY
               valueFrom:
                 secretKeyRef:
-                    name: envsecrets
-                    key: secret_key
-                
-
+                  name: envsecrets
+                  key: secret_key
+                  
       restartPolicy: Never
-  backoffLimit: 7
+    backoffLimit: 7
+
