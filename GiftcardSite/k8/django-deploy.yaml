@@ -38,13 +38,13 @@ spec:
             - name: ADMIN_UNAME
               valueFrom:
                 secretKeyRef:
-                    name: admin-login-secrets
+                    name: envsecrets
                     key: username
 
             - name: ADMIN_PASS
               valueFrom:
                 secretKeyRef:
-                    name: admin-login-secrets
+                    name: envsecrets
                     key: password
 
             - name: SECRET_KEY
