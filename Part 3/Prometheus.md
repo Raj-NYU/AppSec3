@@ -77,3 +77,4 @@ https://github.com/prometheus-community/helm-charts
 
 https://prometheus.io/docs/introduction/first_steps/
 
+***Check submission on gradescope for screenshots of commands and files within my repository for additional information***
