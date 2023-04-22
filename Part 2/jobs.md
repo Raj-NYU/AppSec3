@@ -15,7 +15,7 @@ kubectl get pods
 ```
 
 ## Seeding Job
-To populate the records from one table to another, I have created a seedingjob.yaml file that will make a call to the database using the stored credentials within the yaml file. I have also implemented an argument in the file that will make a call through a separate SQL with the args parameter.
+To populate the records from one table to another, I have created a seedingjob.yaml file that will make a call to the database using the stored credentials within the yaml file.
 To implement and confirm completion, I have updated the Docker file by commenting out the data folder and the setup.sql command since it has already been executed.
 
 To apply the seedingjob.yaml file, I ran the command:
