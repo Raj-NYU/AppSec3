@@ -18,10 +18,10 @@ To ensure that the changes were applied, I ran the command:
 ```
 kubectl delete pods <pod name> 
 ```
-to reset the containers and then ran the command:
+Then to confirm that the plaintext secrets had been replaced with the encrypted secrets from the secretkey.yaml file I ran the command:
 ```
 kubectl exec -it <pod name> /bin/sh
 ```
-to confirm that the plaintext secrets had been replaced with the encrypted secrets from the secretkey.yaml file.
+--
 
 ***Check submission on gradescope for screenshots of commands and files within my repository for additional information***
