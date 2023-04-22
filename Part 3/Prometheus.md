@@ -72,6 +72,8 @@ kubectl delete <pod>
 kubectl get pods
 ```
 Some articles that I used were:
+
 https://github.com/prometheus-community/helm-charts
+
 https://prometheus.io/docs/introduction/first_steps/
 
