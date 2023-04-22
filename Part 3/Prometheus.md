@@ -54,14 +54,9 @@ Doing this opened up a webpage from the running prometheus server. Now I had to 
 kubectl get configmap
 kubectl edit configmap prometheus-19862113000-server
 ```
-I then added the following code for the server to monitor the giftcardsite below (line 25 - 29) within the prometheus-server.yaml:
-```
-- job_name: GiftCardSite_monitoring
-static_configs:
-- targets:
-- proxy-service:8080
-```
-I then copied the configfile which I made edits to a yaml file called prometheus-server.yaml by running the commands:
+I then added the following code for the server to monitor the giftcardsite below (line 25 - 29) within the prometheus-server.yaml.
+
+After, copied the configfile which I made edits to a yaml file called prometheus-server.yaml by running the commands:
 ```
 kubectl get configmap prometheus-19862113000-server -o yaml > prometheus-server.yaml
 ```
