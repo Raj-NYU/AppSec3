@@ -28,3 +28,4 @@ Then to confirm that the yaml file has been implemented and completed I ran the 
 kubectl get job
 kubectl get pods
 ```
+***Check submission on gradescope for screenshots of commands and files within my repository for additional information***
