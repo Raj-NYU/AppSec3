@@ -10,10 +10,15 @@ https://danuka-praneeth.medium.com/setting-up-a-comprehensive-monitoring-system-
 ## Part 3.2 - Removing reasonable monitoring
 For this part, I analyzed the view.py file and noticed that the '404 not found' message was being used in multiple parts of the code. I decided to track the number of times this message is returned in the code, so I added the line graphs['error_return_counter'].inc() beneath each line of code where '404 not found' was returned.
 I identified four specific locations in the code where this message was being returned:
+
 lines 107-109
+
 lines 114-116
+
 lines 161-163
+
 lines 168-170
+
 By adding the graphs['error_return_counter'].inc() line in each of these locations, I can effectively track the number of times the '404 not found' message is returned in the code. 
 Tracking 404 not found errors can be useful for security reasons because it can help identify potential security vulnerabilities in the code.
 When a user requests a resource that does not exist on the server, the server returns a 404 not found response. However, if an attacker is probing the server for sensitive information or trying to exploit a vulnerability, they may intentionally request resources that do not exist in order to elicit a 404 not found response. By tracking the frequency of 404 not found errors, developers can identify whether there is an unusual level of such requests, which may indicate an attack or attempted exploit.
