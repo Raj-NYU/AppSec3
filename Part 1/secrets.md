@@ -23,3 +23,5 @@ to reset the containers and then ran the command:
 kubectl exec -it <pod name> /bin/sh
 ```
 to confirm that the plaintext secrets had been replaced with the encrypted secrets from the secretkey.yaml file.
+
+***Check submission on gradescope for screenshots of commands and files within my repository for additional information***
